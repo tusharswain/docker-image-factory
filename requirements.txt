@@ -1,0 +1,17 @@
+# Docker Image Factory Framework - Python Dependencies
+
+# Core dependencies
+PyYAML>=6.0
+requests>=2.31.0
+
+# AWS SDK (optional, for S3/DynamoDB support)
+boto3>=1.28.0
+
+# Email support (built-in smtplib, but these can enhance functionality)
+email-validator>=2.0.0
+
+# Development dependencies (optional)
+pytest>=7.4.0
+pytest-cov>=4.1.0
+black>=23.7.0
+flake8>=6.0.0

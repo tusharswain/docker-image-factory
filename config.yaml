@@ -1,0 +1,64 @@
+# Docker Image Factory Framework Configuration
+
+# General settings
+log_dir: logs
+default_registry: dockerhub
+
+# Security settings
+security:
+  severity_threshold: HIGH  # CRITICAL, HIGH, MEDIUM, LOW
+
+# Trivy scanner settings
+trivy:
+  enabled: true
+  # Additional Trivy options can be added here
+
+# Snyk scanner settings
+snyk:
+  enabled: false
+  # Snyk token should be set via environment variable: SNYK_TOKEN
+
+# Image signing settings
+signing:
+  default_method: cosign  # cosign or docker-trust
+  cosign_key_path: null  # Path to Cosign private key (optional for keyless signing)
+  docker_trust_passphrase: null  # Docker Content Trust passphrase
+
+# Amazon ECR settings
+ecr:
+  repository_uri: null  # e.g., 123456789012.dkr.ecr.us-east-1.amazonaws.com
+  region: us-east-1
+
+# DockerHub settings
+dockerhub:
+  username: null  # Your DockerHub username
+  password: null  # Your DockerHub password or access token
+
+# Slack notification settings
+slack:
+  enabled: false
+  webhook_url: null  # Slack incoming webhook URL
+
+# Email notification settings
+email:
+  enabled: false
+  smtp_server: smtp.gmail.com
+  smtp_port: 587
+  username: null  # SMTP username
+  password: null  # SMTP password (use app-specific password for Gmail)
+  from_email: null  # Sender email address
+  to_emails: []  # List of recipient email addresses
+
+# Metadata storage settings
+metadata_storage:
+  type: local  # local, s3, or dynamodb
+
+# AWS S3 settings (for metadata storage)
+s3:
+  bucket_name: null  # S3 bucket name
+  region: us-east-1
+
+# AWS DynamoDB settings (for metadata storage)
+dynamodb:
+  table_name: null  # DynamoDB table name
+  region: us-east-1
