@@ -1,6 +1,10 @@
 # Docker Image Factory Framework
 
+[![CI](https://github.com/tusharswain/docker-image-factory/actions/workflows/ci.yml/badge.svg)](https://github.com/tusharswain/docker-image-factory/actions/workflows/ci.yml)
+
 A comprehensive framework for building, scanning, signing, and pushing Docker images with support for multiple languages and automated security workflows.
+
+CI builds the sample Python app through the factory on every push, starts the resulting image, and checks its health endpoint.
 
 ## Features
 

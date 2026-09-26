@@ -58,3 +58,9 @@ Thumbs.db
 # Temporary files
 *.tmp
 *.bak
+
+# Local helper notes
+recreateenv.txt
+
+# Robot Framework output from local test runs
+test_apps/**/results/
